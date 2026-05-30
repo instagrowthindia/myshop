@@ -2,13 +2,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insta Growth India Shop</title>
 
 <style>
-body{
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
+}
+
+body{
 background:#f1f3f6;
 }
 
@@ -21,12 +27,12 @@ font-size:28px;
 font-weight:bold;
 }
 
-.search{
+.search-box{
 padding:10px;
 background:#2874f0;
 }
 
-.search input{
+.search-box input{
 width:100%;
 padding:12px;
 border:none;
@@ -36,27 +42,29 @@ font-size:16px;
 
 .categories{
 display:flex;
-overflow:auto;
+overflow-x:auto;
 background:white;
 padding:10px;
 gap:15px;
 }
 
-.cat{
-min-width:80px;
-text-align:center;
+.categories button{
+border:none;
+background:white;
 font-size:14px;
+font-weight:bold;
+cursor:pointer;
+padding:10px;
 }
 
 .banner{
 margin:10px;
 background:linear-gradient(45deg,#ff9800,#ffc107);
 padding:20px;
-border-radius:10px;
-color:black;
-font-weight:bold;
-font-size:22px;
+border-radius:12px;
 text-align:center;
+font-size:25px;
+font-weight:bold;
 }
 
 .products{
@@ -68,35 +76,42 @@ padding:10px;
 
 .card{
 background:white;
-border-radius:10px;
+border-radius:12px;
 padding:10px;
 box-shadow:0 2px 5px rgba(0,0,0,0.2);
 }
 
 .card img{
 width:100%;
-height:140px;
+height:150px;
 object-fit:cover;
 border-radius:8px;
 }
 
+.card h3{
+margin-top:10px;
+font-size:18px;
+}
+
 .price{
 color:green;
+font-size:20px;
 font-weight:bold;
-font-size:18px;
+margin-top:5px;
 }
 
 .buy{
 display:block;
-margin-top:10px;
+text-align:center;
 background:#25D366;
 color:white;
-text-decoration:none;
-text-align:center;
 padding:10px;
 border-radius:6px;
+text-decoration:none;
+margin-top:10px;
 font-weight:bold;
 }
+
 </style>
 </head>
 
@@ -106,84 +121,183 @@ font-weight:bold;
 Insta Growth India Shop
 </div>
 
-<div class="search">
-<input type="text" placeholder="Search Products...">
+<div class="search-box">
+<input type="text" id="search" placeholder="Search Products..." onkeyup="searchProducts()">
 </div>
 
 <div class="categories">
-<div class="cat">📱<br>Mobiles</div>
-<div class="cat">💻<br>Laptops</div>
-<div class="cat">🎧<br>Electronics</div>
-<div class="cat">👕<br>Fashion</div>
-<div class="cat">👟<br>Shoes</div>
-<div class="cat">⌚<br>Watches</div>
-<div class="cat">🚁<br>Drones</div>
-<div class="cat">🎮<br>Gaming</div>
+
+<button onclick="filterProducts('all')">🏠 All</button>
+
+<button onclick="filterProducts('mobile')">📱 Mobiles</button>
+
+<button onclick="filterProducts('laptop')">💻 Laptops</button>
+
+<button onclick="filterProducts('fashion')">👕 Fashion</button>
+
+<button onclick="filterProducts('electronics')">🎧 Electronics</button>
+
+<button onclick="filterProducts('watch')">⌚ Watches</button>
+
+<button onclick="filterProducts('drone')">🚁 Drones</button>
+
 </div>
 
 <div class="banner">
 🔥 BIG SALE UP TO 70% OFF 🔥
 </div>
 
-<div class="products">
+<div class="products" id="products">
 
-<div class="card">
-<img src="https://picsum.photos/300?1">
+<div class="card mobile">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500">
 <h3>iPhone 15</h3>
 <div class="price">₹59,999</div>
-<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20iPhone%2015">Buy on WhatsApp</a>
+<a class="buy" href="https://wa.me/917258028139?text=I want iPhone 15">Buy Now</a>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/300?2">
+<div class="card mobile">
+<img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500">
 <h3>Samsung S24</h3>
 <div class="price">₹49,999</div>
-<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20Samsung%20S24">Buy on WhatsApp</a>
+<a class="buy" href="https://wa.me/917258028139?text=I want Samsung S24">Buy Now</a>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/300?3">
-<h3>Gaming Laptop</h3>
-<div class="price">₹69,999</div>
-<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20Gaming%20Laptop">Buy on WhatsApp</a>
+<div class="card laptop">
+<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500">
+<h3>HP Laptop</h3>
+<div class="price">₹42,999</div>
+<a class="buy" href="https://wa.me/917258028139?text=I want HP Laptop">Buy Now</a>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/300?4">
-<h3>Smart Watch</h3>
-<div class="price">₹2,499</div>
-<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20Smart%20Watch">Buy on WhatsApp</a>
+<div class="card laptop">
+<img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=500">
+<h3>Dell Laptop</h3>
+<div class="price">₹54,999</div>
+<a class="buy" href="https://wa.me/917258028139?text=I want Dell Laptop">Buy Now</a>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/300?5">
-<h3>Drone Camera</h3>
-<div class="price">₹12,999</div>
-<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20Drone">Buy on WhatsApp</a>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300?6">
-<h3>Men Jacket</h3>
-<div class="price">₹1,299</div>
-<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20Jacket">Buy on WhatsApp</a>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300?7">
+<div class="card fashion">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500">
 <h3>T-Shirt</h3>
 <div class="price">₹499</div>
-<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20T-Shirt">Buy on WhatsApp</a>
+<a class="buy" href="https://wa.me/917258028139?text=I want T-Shirt">Buy Now</a>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/300?8">
-<h3>Sports Shoes</h3>
-<div class="price">₹1,999</div>
-<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20Sports%20Shoes">Buy on WhatsApp</a>
+<div class="card fashion">
+<img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500">
+<h3>Men Jacket</h3>
+<div class="price">₹1299</div>
+<a class="buy" href="https://wa.me/917258028139?text=I want Jacket">Buy Now</a>
 </div>
 
 </div>
+
+<script>
+
+function searchProducts(){
+let input=document.getElementById("search").value.toLowerCase();
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+let text=card.innerText.toLowerCase();
+
+if(text.includes(input)){
+card.style.display="block";
+}else{
+card.style.display="none";
+}
+});
+}
+
+function filterProducts(category){
+
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+if(category==="all"){
+card.style.display="block";
+}
+else if(card.classList.contains(category)){
+card.style.display="block";
+}
+else{
+card.style.display="none";
+}
+
+});
+}
+<div class="card electronics">
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
+<h3>Boat Headphones</h3>
+<div class="price">₹1,499</div>
+<a class="buy" href="https://wa.me/917258028139?text=I want Boat Headphones">Buy Now</a>
+</div>
+
+<div class="card electronics">
+<img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500">
+<h3>Bluetooth Speaker</h3>
+<div class="price">₹2,299</div>
+<a class="buy" href="https://wa.me/917258028139?text=I want Bluetooth Speaker">Buy Now</a>
+</div>
+
+<div class="card watch">
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500">
+<h3>Smart Watch</h3>
+<div class="price">₹2,999</div>
+<a class="buy" href="https://wa.me/917258028139?text=I want Smart Watch">Buy Now</a>
+</div>
+
+<div class="card watch">
+<img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=500">
+<h3>Luxury Watch</h3>
+<div class="price">₹4,999</div>
+<a class="buy" href="https://wa.me/917258028139?text=I want Luxury Watch">Buy Now</a>
+</div>
+
+<div class="card drone">
+<img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=500">
+<h3>Drone Camera Pro</h3>
+<div class="price">₹12,999</div>
+<a class="buy" href="https://wa.me/917258028139?text=I want Drone Camera Pro">Buy Now</a>
+</div>
+
+<div class="card drone">
+<img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=500">
+<h3>Mini Drone</h3>
+<div class="price">₹7,999</div>
+<a class="buy" href="https://wa.me/917258028139?text=I want Mini Drone">Buy Now</a>
+</div>
+
+<div class="card electronics">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500">
+<h3>Gaming PC</h3>
+<div class="price">₹59,999</div>
+<a class="buy" href="https://wa.me/917258028139?text=I want Gaming PC">Buy Now</a>
+</div>
+
+<div class="card electronics">
+<img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500">
+<h3>4K Smart TV</h3>
+<div class="price">₹34,999</div>
+<a class="buy" href="https://wa.me/917258028139?text=I want 4K Smart TV">Buy Now</a>
+</div>
+
+<div class="card fashion">
+<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500">
+<h3>Men Jeans</h3>
+<div class="price">₹899</div>
+<a class="buy" href="https://wa.me/917258028139?text=I want Men Jeans">Buy Now</a>
+</div>
+
+<div class="card fashion">
+<img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=500">
+<h3>Premium Hoodie</h3>
+<div class="price">₹1,299</div>
+<a class="buy" href="https://wa.me/917258028139?text=I want Premium Hoodie">Buy Now</a>
+</div>
+</script>
 
 </body>
 </html>
