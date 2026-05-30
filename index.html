@@ -1,298 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Fashion Shop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insta Growth India Shop</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
-background:#f4f4f4;
-}
-
-header{
-background:#111;
-color:white;
-padding:20px;
-text-align:center;
-}
-
-header h1{
-font-size:32px;
-}
-
-.hero{
-background:linear-gradient(135deg,#ff4d4d,#ff9900);
-color:white;
-padding:50px 20px;
-text-align:center;
-}
-
-.hero h2{
-font-size:32px;
-margin-bottom:10px;
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:20px;
-}
-
-.card{
-background:white;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-.card img{
-width:100%;
-height:250px;
-object-fit:cover;
-}
-
-.card-content{
-padding:15px;
-text-align:center;
-}
-
-.card-content h3{
-margin-bottom:10px;
-}
-
-.price{
-font-size:22px;
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Mega Shop</title>
-
-<style>
-*{
 margin:0;
-padding:0;
-box-sizing:border-box;
 font-family:Arial,sans-serif;
-}
-
-body{
 background:#f1f3f6;
 }
 
-header{
+.header{
 background:#2874f0;
 padding:15px;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-.logo{
 color:white;
+text-align:center;
 font-size:28px;
 font-weight:bold;
-text-align:center;
 }
 
-.search-box{
-margin-top:10px;
-display:flex;
-justify-content:center;
+.search{
+padding:10px;
+background:#2874f0;
 }
 
-.search-box input{
-width:90%;
-max-width:700px;
+.search input{
+width:100%;
 padding:12px;
 border:none;
-border-radius:5px;
+border-radius:8px;
 font-size:16px;
 }
 
 .categories{
 display:flex;
-overflow-x:auto;
+overflow:auto;
 background:white;
-padding:15px;
+padding:10px;
 gap:15px;
 }
 
 .cat{
-background:#fff;
-padding:10px 15px;
-border-radius:8px;
-box-shadow:0 0 5px rgba(0,0,0,.1);
-white-space:nowrap;
-font-weight:bold;
+min-width:80px;
+text-align:center;
+font-size:14px;
 }
 
 .banner{
-background:linear-gradient(135deg,#ff6b6b,#ffb347);
-color:white;
-padding:30px;
-text-align:center;
 margin:10px;
+background:linear-gradient(45deg,#ff9800,#ffc107);
+padding:20px;
 border-radius:10px;
+color:black;
+font-weight:bold;
+font-size:22px;
+text-align:center;
 }
 
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-padding:15px;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+padding:10px;
 }
 
-.product{
+.card{
 background:white;
 border-radius:10px;
-overflow:hidden;
-box-shadow:0 2px 8px rgba(0,0,0,.1);
+padding:10px;
+box-shadow:0 2px 5px rgba(0,0,0,0.2);
 }
 
-.product img{
+.card img{
 width:100%;
-height:180px;
+height:140px;
 object-fit:cover;
-}
-
-.info{
-padding:12px;
-}
-
-.info h3{
-font-size:18px;
-margin-bottom:8px;
+border-radius:8px;
 }
 
 .price{
-font-size:22px;
 color:green;
 font-weight:bold;
-margin-bottom:10px;
+font-size:18px;
 }
 
 .buy{
 display:block;
+margin-top:10px;
 background:#25D366;
 color:white;
+text-decoration:none;
 text-align:center;
 padding:10px;
-text-decoration:none;
-border-radius:5px;
+border-radius:6px;
 font-weight:bold;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:20px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">MY MEGA SHOP</div>
-
-<div class="search-box">
-<input type="text" id="search" placeholder="Search Products...">
+<div class="header">
+Insta Growth India Shop
 </div>
-</header>
+
+<div class="search">
+<input type="text" placeholder="Search Products...">
+</div>
 
 <div class="categories">
-<div class="cat">📱 Mobiles</div>
-<div class="cat">💻 Laptops</div>
-<div class="cat">🎧 Electronics</div>
-<div class="cat">👕 Fashion</div>
-<div class="cat">👟 Shoes</div>
-<div class="cat">🧥 Jackets</div>
-<div class="cat">⌚ Watches</div>
-<div class="cat">🚁 Drones</div>
-<div class="cat">🎮 Gaming</div>
+<div class="cat">📱<br>Mobiles</div>
+<div class="cat">💻<br>Laptops</div>
+<div class="cat">🎧<br>Electronics</div>
+<div class="cat">👕<br>Fashion</div>
+<div class="cat">👟<br>Shoes</div>
+<div class="cat">⌚<br>Watches</div>
+<div class="cat">🚁<br>Drones</div>
+<div class="cat">🎮<br>Gaming</div>
 </div>
 
 <div class="banner">
-<h2>Big Sale Today</h2>
-<p>Up To 70% OFF On All Products</p>
+🔥 BIG SALE UP TO 70% OFF 🔥
 </div>
 
-<div class="products" id="products">
+<div class="products">
 
-<div class="product">
-<img src="https://picsum.photos/400/300?1">
-<div class="info">
-<h3>iPhone 15 Pro</h3>
-<div class="price">₹79,999</div>
-<a class="buy" href="https://wa.me/917258028139?text=I want to buy iPhone 15 Pro">Buy Now</a>
-</div>
-</div>
-
-<div class="product">
-<img src="https://picsum.photos/400/300?2">
-<div class="info">
-<h3>Gaming Laptop</h3>
+<div class="card">
+<img src="https://picsum.photos/300?1">
+<h3>iPhone 15</h3>
 <div class="price">₹59,999</div>
-<a class="buy" href="https://wa.me/917258028139?text=I want to buy Gaming Laptop">Buy Now</a>
-</div>
-</div>
-
-<div class="product">
-<img src="https://picsum.photos/400/300?3">
-<div class="info">
-<h3>Premium Jacket</h3>
-<div class="price">₹1,499</div>
-<a class="buy" href="https://wa.me/917258028139?text=I want to buy Premium Jacket">Buy Now</a>
-</div>
+<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20iPhone%2015">Buy on WhatsApp</a>
 </div>
 
-<div class="product">
-<img src="https://picsum.photos/400/300?4">
-<div class="info">
-<h3>Sports Shoes</h3>
-<div class="price">₹1,999</div>
-<a class="buy" href="https://wa.me/917258028139?text=I want to buy Sports Shoes">Buy Now</a>
-</div>
+<div class="card">
+<img src="https://picsum.photos/300?2">
+<h3>Samsung S24</h3>
+<div class="price">₹49,999</div>
+<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20Samsung%20S24">Buy on WhatsApp</a>
 </div>
 
-<div class="product">
-<img src="https://picsum.photos/400/300?5">
-<div class="info">
-<h3>Drone Camera</h3>
-<div class="price">₹8,999</div>
-<a class="buy" href="https://wa.me/917258028139?text=I want to buy Drone Camera">Buy Now</a>
-</div>
+<div class="card">
+<img src="https://picsum.photos/300?3">
+<h3>Gaming Laptop</h3>
+<div class="price">₹69,999</div>
+<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20Gaming%20Laptop">Buy on WhatsApp</a>
 </div>
 
-<div class="product">
-<img src="https://picsum.photos/400/300?6">
-<div class="info">
+<div class="card">
+<img src="https://picsum.photos/300?4">
 <h3>Smart Watch</h3>
 <div class="price">₹2,499</div>
-<a class="buy" href="https://wa.me/917258028139?text=I want to buy Smart Watch">Buy Now</a>
+<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20Smart%20Watch">Buy on WhatsApp</a>
 </div>
+
+<div class="card">
+<img src="https://picsum.photos/300?5">
+<h3>Drone Camera</h3>
+<div class="price">₹12,999</div>
+<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20Drone">Buy on WhatsApp</a>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300?6">
+<h3>Men Jacket</h3>
+<div class="price">₹1,299</div>
+<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20Jacket">Buy on WhatsApp</a>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300?7">
+<h3>T-Shirt</h3>
+<div class="price">₹499</div>
+<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20T-Shirt">Buy on WhatsApp</a>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300?8">
+<h3>Sports Shoes</h3>
+<div class="price">₹1,999</div>
+<a class="buy" href="https://wa.me/917258028139?text=I%20want%20to%20buy%20Sports%20Shoes">Buy on WhatsApp</a>
 </div>
 
 </div>
-
-<footer>
-<h3>Contact Us</h3>
-<p>WhatsApp: 7258028139</p>
-<p>© 2026 My Mega Shop</p>
-</footer>
 
 </body>
 </html>
